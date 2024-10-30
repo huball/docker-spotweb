@@ -9,7 +9,7 @@ services:
      - GUID=1001
      - TZ=Europe/Warsaw
      - SPOTWEB_DB_TYPE=pdo_mysql
-     - SPOTWEB_DB_HOST=spotweb_db
+     - SPOTWEB_DB_HOST=spotwebdb
      - SPOTWEB_DB_PORT=3306
      - SPOTWEB_DB_NAME=spotweb
      - SPOTWEB_DB_USER=spotweb
