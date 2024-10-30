@@ -7,7 +7,7 @@ services:
     environment:
      - PUID=1001
      - GUID=1001
-     - TZ=Europe/Amsterdam
+     - TZ=Europe/Warsaw
      - SPOTWEB_DB_TYPE=pdo_mysql
      - SPOTWEB_DB_HOST=spotweb_db
      - SPOTWEB_DB_PORT=3306
@@ -20,7 +20,7 @@ services:
     ports:
      - 81:80
     volumes:
-     - <your_base_directory>/spotweb:/config
+     - /nvme0/docker/spotweb:/config
 
   spotweb_db:
     image: linuxserver/mariadb
@@ -30,11 +30,11 @@ services:
      - PUID=1001
      - PGID=1001
      - MYSQL_ROOT_PASSWORD=spotweb
-     - TZ=Europe/Amsterdam
+     - TZ=Europe/Warsaw
      - MYSQL_DATABASE=spotweb
      - MYSQL_USER=spotweb
      - MYSQL_PASSWORD=spotweb
     volumes:
-     - <your_base_directory>/mariadb:/config
+     - /nvme0/docker/mariadb:/config
     ports:
      - 3306:3306
