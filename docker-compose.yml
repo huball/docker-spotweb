@@ -20,7 +20,7 @@ services:
     ports:
      - 81:80
     volumes:
-     - /nvme0/docker/spotweb:/config
+     - /mnt/nvme0/docker/spotweb:/config
 
   spotweb_db:
     image: linuxserver/mariadb
@@ -35,6 +35,6 @@ services:
      - MYSQL_USER=spotweb
      - MYSQL_PASSWORD=spotweb
     volumes:
-     - /nvme0/docker/mariadb:/config
+     - /mnt/nvme0/docker/mariadb:/config
     ports:
      - 3306:3306
