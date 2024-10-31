@@ -18,7 +18,7 @@ services:
     depends_on:
      - spotweb_db
     ports:
-     - 80:81
+     - 81:80
     volumes:
      - /mnt/nvme0/docker/spotweb/spotweb:/config
 
